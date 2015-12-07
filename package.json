@@ -1,0 +1,28 @@
+{
+  "name": "midori-react",
+  "version": "0.0.0",
+  "description": "react playground for react.js training",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtkocak/midori-react.git"
+  },
+  "keywords": [
+    "react",
+    "mtkocak",
+    "react.js"
+  ],
+  "author": "Midori Kocak mtkocak@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtkocak/midori-react/issues"
+  },
+  "homepage": "https://github.com/mtkocak/midori-react#readme"
+}
