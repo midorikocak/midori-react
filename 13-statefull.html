@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+    var TextAreaCounter = React.createClass({
+        
+        propTypes: {
+                text: React.PropTypes.string
+        },
+        
+        getInitialState: function(){
+            return {
+                text: this.props.text,
+            };  
+        },
+        
+        _textChange: function(ev){
+          this.setState({
+              text: ev.target.value
+          });  
+        },
+        
+        render: function(){
+            return React.DOM.div(null,
+                React.DOM.textarea({
+                    value: this.state.text,
+                    onChange: this._textChange
+                }),
+                React.DOM.h3(null, this.state.text.length)
+            );
+        }
+    });
+    
+    ReactDOM.render(
+        React.createElement(TextAreaCounter, {
+            text: "Bob"
+        }),
+        document.getElementById('container')
+    );
+    </script>
+  </body>
+</html>
